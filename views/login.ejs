@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="form glassmorphism-effect">
+    <form action="../usuarios/login" method="POST">
+        <div>
+          <label for="user">User</label>
+          <input type="text" id="user" name="user" required>
+        </div>
+        <div>
+          <label for="pass">Pass</label>
+          <input type="pass" id="pass" name="pass" required>
+        </div>
+        <input type="submit" class="add" value="Login">
+    </form>
+    <% if (error) { %>
+      <p class="error"><%= error %></p>
+    <% } %>
+  </div>   
+</body>
+</html>
