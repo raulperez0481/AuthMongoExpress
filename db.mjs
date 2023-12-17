@@ -7,6 +7,7 @@ let conn;
 
 try {
     conn = await client.connect();
+    console.log("conectado a la db");
 } catch (error) {
     console.error(error);
 }
