@@ -39,11 +39,11 @@ router.post('/login', async (req, res) => {
             if (passwordMatch) {
                 //inicializo variables de sesion
                 req.session.user = {
-                    id: user._id,
-                    name: user.name
+                    id: existingUser._id,
+                    name: existingUser.user
                 };
                 // Contraseña válida, redirige a la página de gestión
-                res.redirect('/usuarios/gestion');
+                res.redirect(`/usuarios/gestion`);
             } else {
                 // Contraseña incorrecta, redirige con un mensaje de error
                 res.redirect('/usuarios/login?error=Nombre de usuario o contraseña incorrectos');
@@ -97,7 +97,11 @@ router.post('/crearUsuario', async (req, res) => {
 });
 
 router.get('/gestion', requireLogin, (req, res) => {
-    res.render('gestion');
+    if (req.session.user) {
+        const { name } = req.session.user;
+        // Renderiza la plantilla 'gestion.ejs' pasando la variable 'username'
+        res.render('gestion', { username: name });
+    } 
 });
 
 
