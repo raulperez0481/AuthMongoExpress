@@ -37,5 +37,21 @@ Asegúrate de tener MongoDB instalado y en ejecución.
 - bcrypt: `npm install bcrypt`
 - express-session: `npm install express-session`
   
+## Contribución
 
+¡Contribuciones son bienvenidas! Por favor, sigue estos pasos:
+
+1. Haz un fork del repositorio
+2. Crea una rama para tu contribución: `git checkout -b nueva-funcionalidad`
+3. Realiza tus cambios y haz commit: `git commit -m 'Agrega nueva funcionalidad'`
+4. Haz push a la rama: `git push origin nueva-funcionalidad`
+5. Abre un pull request en GitHub.
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT.
+
+## Contacto
+
+Si tienes preguntas, puedes contactarme en raulperez0481@gmail.com
 
