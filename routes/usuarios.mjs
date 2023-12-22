@@ -3,10 +3,16 @@ import db from "../db.mjs";
 import bcrypt from "bcrypt";
 import session from 'express-session';
 
+// Importa y configura dotenv para cargar variables de entorno desde .env
+import 'dotenv/config';
+
+// Obtén el secreto desde las variables de entorno
+const secreto = process.env.SECRETO;
+
 const router = express.Router();
 
 router.use(session({
-    secret: 'mi-secreto',
+    secret: secreto,
     resave: false,
     saveUninitialized: true 
   }));
